@@ -18,12 +18,12 @@
  - 브라우저에서 다음 주소로 접속
     - http://127.0.0.1:8000
   
-## PNG
+## PNG 
  - branch_protection.png
     - png
  - push_rejected.png
-    - png
+    - <img width="547" alt="push_rejected" src="https://github.com/user-attachments/assets/e1b453e1-d49c-49c6-82b0-6a3fea6fae92" />
  - merged.png
     - <img width="547" alt="merged_lupin0326" src="https://github.com/user-attachments/assets/b40b7f0d-6a0f-453c-9fa6-51fb9ac9186e" />
-    - png2
+    - <img width="547" alt="merged_joetae" src="https://github.com/user-attachments/assets/b183ce4d-115a-4355-ac2e-7247190c6b8d" />
     - png3

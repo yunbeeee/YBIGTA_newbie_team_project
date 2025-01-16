@@ -10,6 +10,7 @@
     - 연세대학교 문헌정보학과 20학번
  - 엄윤희
     - 연세대학교 컴퓨터과학과 22학번
+
       
 ## app 프로젝트 실행방법
  - bash에서 실행
@@ -21,9 +22,15 @@
 ## PNG 
  - branch_protection.png
     - <img width="547" alt="branch_protection" src="https://github.com/user-attachments/assets/d8555ec4-4c49-4700-95ab-bad78c23b334" />
+
  - push_rejected.png
     - <img width="547" alt="push_rejected" src="https://github.com/user-attachments/assets/e1b453e1-d49c-49c6-82b0-6a3fea6fae92" />
  - merged.png
     - <img width="547" alt="merged_lupin0326" src="https://github.com/user-attachments/assets/b40b7f0d-6a0f-453c-9fa6-51fb9ac9186e" />
     - <img width="547" alt="merged_joetae" src="https://github.com/user-attachments/assets/b183ce4d-115a-4355-ac2e-7247190c6b8d" />
+<<<<<<< HEAD
     - <img width="547" alt="merged_yunbeeee" src="https://github.com/user-attachments/assets/0bcb2a76-c69d-40fe-8e92-5d9153ec3200" />
+=======
+    - <img width="547" alt="merged_yunbeeee" src="" />
+
+>>>>>>> 620ab1a65128f2500f5266c1c5b6a60419fe38c0

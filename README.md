@@ -18,7 +18,7 @@
  - 브라우저에서 다음 주소로 접속
     - http://127.0.0.1:8000
   
-## PNG
+## PNG 
  - branch_protection.png
     - png
  - push_rejected.png

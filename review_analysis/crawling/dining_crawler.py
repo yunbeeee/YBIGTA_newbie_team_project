@@ -37,6 +37,8 @@ class DiningCodeCrawler(BaseCrawler):
         self.driver.get(self.base_url)
         time.sleep(5)  # 페이지 로드 대기
 
+        existing_reviews = set()
+
         while True:
             time.sleep(3)  # 페이지 로드 대기
             soup = BeautifulSoup(self.driver.page_source, "html.parser")
@@ -47,11 +49,16 @@ class DiningCodeCrawler(BaseCrawler):
             dates = soup.select("div.date")
 
             for review, score, date in zip(review_texts, scores, dates):
-                self.reviews_data.append({
+                review_data = {
                     "rating": score.text.strip(),
                     "date": date.text.strip(),
                     "review": review.text.strip()
-                })
+                }
+                # 중복 데이터 확인
+                review_identifier = f"{review_data['review']}-{review_data['date']}"  # 고유 키 생성
+                if review_identifier not in existing_reviews:
+                    existing_reviews.add(review_identifier)
+                    self.reviews_data.append(review_data)
 
             # "평가 더보기" 버튼 클릭
             try:

@@ -86,6 +86,10 @@ class KakaomapCrawler(BaseCrawler):
                         comment = review.select_one(".txt_comment span").get_text(strip=True)
                     except AttributeError:
                         comment = "리뷰 내용 없음"
+
+                    # 4. 중복 여부 확인
+                    if any(existing_review['content'] == comment for existing_review in self.reviews):
+                        continue  # 중복 리뷰는 건너뜁니다
                     
                     # 리뷰 정보를 self.reviews 리스트에 저장
                     self.reviews.append({'rating': star_rating, 'date': date, 'content': comment})

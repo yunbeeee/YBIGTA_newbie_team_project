@@ -29,7 +29,7 @@ class GoogleMapsCrawler(BaseCrawler):
     def __init__(self, output_dir: str):
         super().__init__(output_dir)
         self.base_url = 'https://www.google.co.kr/maps/?hl=ko'
-        self.review_data = []  # 크롤링 데이터를 저장할 변수
+        self.review_data: list[list[str]] = []  # 크롤링 데이터를 저장할 변수
         log_file_name = 'googlemaps_crawler.log'
         self.logger = setup_logger(log_file=log_file_name)  # 로거 설정
         self.logger.info("GoogleMapsCrawler가 초기화되었습니다.")
@@ -100,8 +100,11 @@ class GoogleMapsCrawler(BaseCrawler):
                     rating_element = review.find('span', class_='kvMYJc')
                     if rating_element:
                         rating = rating_element.get('aria-label')  # 예: "별표 5개"
-                        rating = re.search(r'\d+', rating).group()  # 숫자만 추출
-                        blank.append(rating)
+                        match = re.search(r'\d+', rating)  # 정규표현식으로 숫자 추출
+                        if match:  # match가 None이 아닌 경우
+                            blank.append(match.group())
+                        else:
+                            blank.append("N/A")  # 정규표현식에 일치하는 숫자가 없는 경우
                     else:
                         blank.append("N/A")
 

@@ -156,7 +156,7 @@
 ### 3. 시계열 분석
 
 - **GoogleMaps**
-- <img width="547" alt="googlemaps_timeseries" src="https://github.com/user-attachments/assets/de0b98cb-ef94-4de6-b149-b60b717d02db" />
+- <img width="547" alt="googlemaps_timeseries" src="review_analysis/plots/timeseries_googlemaps.png" />
 - **분석 내용**: 
   - 리뷰 데이터 중 `1년 전`, `2년 전`과 같이 특정 날짜 정보를 알 수 없는 경우, **year 단위**로만 분류하여 분석.
   - 시간 흐름에 따른 리뷰 개수와 평균 별점의 변화 관찰.
@@ -164,7 +164,7 @@
 ---
 
 - **KakaoMap**
-- <img width="547" alt="kakaomaps_timeseries" src="https://github.com/user-attachments/assets/102a1f73-1e38-4c28-a286-1a9eba215514" />
+- <img width="547" alt="kakaomaps_timeseries" src="review_analysis/plots/timeseries_kakaomap.png" />
 - **분석 내용**: 
   - 리뷰 데이터는 **2021년부터 2025년 1월**까지의 데이터를 대상으로 분석.
   - 리뷰 데이터를 **month 단위**로 분류하여 시간 흐름에 따른 변화 확인.
@@ -172,7 +172,7 @@
 ---
 
 - **DiningCode**
-- <img width="547" alt="diningcode_timeseries" src="https://github.com/user-attachments/assets/c2a3e550-79f0-4a36-af7c-f8afd577e8b8" />
+- <img width="547" alt="diningcode_timeseries" src="review_analysis/plots/timeseries_diningcode_seasonal.png" />
 - **분석 내용**: 
   - **2016년부터 2025년 1월**까지의 데이터를 대상으로 분석.
   - KakaoMap과의 비교를 위해 **계절 단위(봄, 여름, 가을, 겨울)**로 데이터를 분류하여 분석.

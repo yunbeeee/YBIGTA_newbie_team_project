@@ -176,7 +176,7 @@
 - **분석 내용**: 
   - **2016년부터 2025년 1월**까지의 데이터를 대상으로 분석.
   - KakaoMap과의 비교를 위해 **계절 단위(봄, 여름, 가을, 겨울)**로 데이터를 분류하여 분석.
-  - month 단위로 분류한 추가적인 그래프는 `review_analysis/plots` 디렉토리를 참조.
+  - month 단위로 분류한 추가적인 그래프는 `review_analysis/plots/timeseries_diningcode.png` 디렉토리를 참조.
 
 ---
 

@@ -87,9 +87,15 @@
 
 ## EDA 그래프와 설명
 - **특성**:
+   - 날짜가 '2주 전', '3달 전'과 같이 표시된 경우 현재 시점 기준으로 계산하여 카카오맵, 다이닝코드는 연-월, 구글맵은 연단위까지 수집집
    - 1점~5점 내에 분포하는 별점
    - 각기 다른 형식으로 표현된 날짜(현재 시점 기준 상대적인 시간 표현)
-
+   - 사이트별 별점 분포 그래프
+   <p align="center">
+      <img src="review_analysis/plots/EDA_rating_diningcode.png" alt="다이닝코드 별점 분포" width="300" />
+      <img src="review_analysis/plots/EDA_rating_google.png" alt="구글맵스 별점 분포" width="300" />
+      <img src="review_analysis/plots/EDA_rating_kakao.png" alt="카카오맵 별점 분포" width="300" />
+   </p>
 - **결측치, 이상치 탐색**:
    - 별점, 날짜만 존재하며 내용은 작성되지 않은 경우
    - 정확한 날짜가 나타나 있지 않은 경우

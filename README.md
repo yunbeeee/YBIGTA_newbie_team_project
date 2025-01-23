@@ -152,7 +152,44 @@
 
 ---
 
+
 ### 3. 시계열 분석
 
+- **GoogleMaps**
+- <img width="547" alt="googlemaps_timeseries" src="https://github.com/user-attachments/assets/de0b98cb-ef94-4de6-b149-b60b717d02db" />
+- **분석 내용**: 
+  - 리뷰 데이터 중 `1년 전`, `2년 전`과 같이 특정 날짜 정보를 알 수 없는 경우, **year 단위**로만 분류하여 분석.
+  - 시간 흐름에 따른 리뷰 개수와 평균 별점의 변화 관찰.
 
 ---
+
+- **KakaoMap**
+- <img width="547" alt="kakaomaps_timeseries" src="https://github.com/user-attachments/assets/102a1f73-1e38-4c28-a286-1a9eba215514" />
+- **분석 내용**: 
+  - 리뷰 데이터는 **2021년부터 2025년 1월**까지의 데이터를 대상으로 분석.
+  - 리뷰 데이터를 **month 단위**로 분류하여 시간 흐름에 따른 변화 확인.
+
+---
+
+- **DiningCode**
+- <img width="547" alt="diningcode_timeseries" src="https://github.com/user-attachments/assets/c2a3e550-79f0-4a36-af7c-f8afd577e8b8" />
+- **분석 내용**: 
+  - **2016년부터 2025년 1월**까지의 데이터를 대상으로 분석.
+  - KakaoMap과의 비교를 위해 **계절 단위(봄, 여름, 가을, 겨울)**로 데이터를 분류하여 분석.
+  - month 단위로 분류한 추가적인 그래프는 `review_analysis/plots` 디렉토리를 참조.
+
+---
+
+- **종합 분석**
+  - **리뷰 개수 추세**:
+    - KakaoMap과 DiningCode 모두 시간이 지남에 따라 리뷰 개수가 **꾸준히 증가**하는 경향을 보임.
+    - DiningCode의 경우, **2020년대 리뷰 수**가 전년도 및 후년도와 비교하여 소폭 감소. 이는 **COVID-19**와 같은 외부 요인의 영향을 받은 것으로 추정됨.
+
+  - **평균 별점 추세**:
+    - DiningCode의 평균 별점은 **2018년 이후 4.25** 수준을 안정적으로 유지.
+    - KakaoMap은 **2021년부터 평균 별점 4점대**를 기록하였으나, 시간이 지남에 따라 점차 낮아지는 추세를 보임.
+
+  - **계절적 패턴**:
+    - 리뷰 수와 평균 별점의 **계절적인 변화**는 뚜렷하지 않음. 이는 리뷰 작성이 특정 계절에 국한되지 않고 연중 고르게 분포하고 있음을 시사.
+---
+

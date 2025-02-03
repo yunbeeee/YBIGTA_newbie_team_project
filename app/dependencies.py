@@ -1,9 +1,27 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from fastapi import Depends
 from app.user.user_repository import UserRepository
 from app.user.user_service import UserService
 
-def get_user_repository() -> UserRepository:
-    return UserRepository()
+from sqlalchemy.orm import Session
+from database.mysql_connection import SessionLocal
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    except Exception as e:
+        print(f"연결 오류: {e}")
+        raise    
+    finally:
+        db.close()
+
+def get_user_repository(db: Session = Depends(get_db)) -> UserRepository:
+    return UserRepository(db)
 
 def get_user_service(repo: UserRepository = Depends(get_user_repository)) -> UserService:
     return UserService(repo)

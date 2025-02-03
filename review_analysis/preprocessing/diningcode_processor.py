@@ -8,15 +8,27 @@ from datetime import timedelta
 from transformers import BertTokenizer, BertModel
 import torch
 
+from database.mongodb_connection import mongo_db
+
 class DiningcodeProcessor(BaseDataProcessor):
-    def __init__(self, input_path: str, output_path: str):
-        super().__init__(input_path, output_path)
-        self.df = pd.read_csv(input_path, encoding='utf-8-sig')
+    def __init__(self, site_name: str):
+        """
+        MongoDB에서 데이터를 가져와 전처리하는 DiningcodeProcessor 클래스.
+        :param site_name: 크롤링한 사이트 이름 (diningcode, googlemaps, kakaomap 등)
+        """
+        self.site_name = site_name
+        self.collection = mongo_db[site_name]
+        self.df = self.load_data()
 
         # BERT 모델과 토크나이저 로드
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         self.model = BertModel.from_pretrained('bert-base-uncased')
-
+    
+    def load_data(self):
+        """MongoDB에서 데이터를 불러와 DataFrame으로 변환"""
+        data = list(self.collection.find({}, {'_id': 0}))  
+        # MongoDB에서 _id 제외하고 모든 데이터 조회
+        return pd.DataFrame(data)
 
     def preprocess(self):
         # 컬럼명 수정 (CSV 파일에 맞게)
@@ -56,8 +68,26 @@ class DiningcodeProcessor(BaseDataProcessor):
 
 
     def save_to_database(self):
+        """
         output_file = f"{self.output_dir}/preprocessed_reviews_diningcode.csv"
         self.df.to_csv(output_file, index=False, encoding='utf-8-sig')
+        """
+        if not self.df.empty:
+            collection_name = f"preprocessed_{self.site_name}"
+            collection = mongo_db[collection_name]
+
+            # NumPy 배열을 리스트로 변환
+            if 'review_vector_bert' in self.df.columns:
+                # print("변환 전 데이터 타입:", type(self.df['review_vector_bert'].iloc[0]))
+                self.df['review_vector_bert'] = self.df['review_vector_bert'].apply(lambda x: x.tolist() if isinstance(x, np.ndarray) else x)
+                # print("변환 후 데이터 타입:", type(self.df['review_vector_bert'].iloc[0]))
+            # 데이터 존재 여부 확인 후 추가
+
+            # print("MongoDB에 저장할 데이터 샘플:", self.df.iloc[0].to_dict())
+
+            for record in self.df.to_dict(orient="records"):
+                if not collection.find_one({"review_text": record["review_text"]}):  # 중복 방지
+                    collection.insert_one(record)
 
     def _generate_review_text(self, rating):
         # 별점에 따른 리뷰 문구 생성

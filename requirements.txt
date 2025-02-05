@@ -26,5 +26,6 @@ pymysql==1.1.1
 python-dotenv==1.0.1
 numpy==1.24.1
 scikit-learn==1.2.0
+sqlalchemy==1.4.39
 transformers==4.28.1
 torch==2.1.0

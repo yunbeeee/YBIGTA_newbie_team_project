@@ -198,8 +198,10 @@
   - **계절적 패턴**:
     - 리뷰 수와 평균 별점의 **계절적인 변화**는 뚜렷하지 않음. 이는 리뷰 작성이 특정 계절에 국한되지 않고 연중 고르게 분포하고 있음을 시사.
 ---
-## DockerHub 링크
-- [joetae/docker-image](https://hub.docker.com/r/joetae/docker-image)
+
+### Docker Hub Repository  
+본 프로젝트의 Docker 이미지는 아래 Docker Hub에서 확인할 수 있습니다.
+**Docker Hub:** [joetae/docker-image](https://hub.docker.com/r/joetae/docker-image)
 
 ## API 실행 결과
 

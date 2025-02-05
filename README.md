@@ -37,9 +37,9 @@
 
 ### Merged
 <p align="center">
-    <img width="300" alt="merged_lupin0326" src="https://github.com/user-attachments/assets/b40b7f0d-6a0f-453c-9fa6-51fb9ac9186e" />
-    <img width="300" alt="merged_joetae" src="https://github.com/user-attachments/assets/b183ce4d-115a-4355-ac2e-7247190c6b8d" />
-    <img width="300" alt="merged_yunbeeee" src="https://github.com/user-attachments/assets/0bcb2a76-c69d-40fe-8e92-5d9153ec3200" />
+    <img width="280" alt="merged_lupin0326" src="https://github.com/user-attachments/assets/b40b7f0d-6a0f-453c-9fa6-51fb9ac9186e" />
+    <img width="280" alt="merged_joetae" src="https://github.com/user-attachments/assets/b183ce4d-115a-4355-ac2e-7247190c6b8d" />
+    <img width="280" alt="merged_yunbeeee" src="https://github.com/user-attachments/assets/0bcb2a76-c69d-40fe-8e92-5d9153ec3200" />
 </p>
 
 ---
@@ -92,9 +92,9 @@
    - 각기 다른 형식으로 표현된 날짜(현재 시점 기준 상대적인 시간 표현)
    - 사이트별 별점 분포 그래프
    <p align="center">
-      <img src="review_analysis/plots/EDA_rating_diningcode.png" alt="다이닝코드 별점 분포" width="300" />
-      <img src="review_analysis/plots/EDA_rating_google.png" alt="구글맵스 별점 분포" width="300" />
-      <img src="review_analysis/plots/EDA_rating_kakao.png" alt="카카오맵 별점 분포" width="300" />
+      <img src="review_analysis/plots/EDA_rating_diningcode.png" alt="다이닝코드 별점 분포" width="280" />
+      <img src="review_analysis/plots/EDA_rating_google.png" alt="구글맵스 별점 분포" width="280" />
+      <img src="review_analysis/plots/EDA_rating_kakao.png" alt="카카오맵 별점 분포" width="280" />
    </p>
 - **결측치, 이상치 탐색**:
    - 별점, 날짜만 존재하며 내용은 작성되지 않은 경우
@@ -134,26 +134,26 @@
 ### 2. 감성 분석
 - 각 플랫폼에서 긍정/부정/중립 리뷰 비율을 나타낸 파이차트입니다.
 <p align="center">
-    <img src="review_analysis/plots/sentiment distribution_diningcode.png" alt="다이닝코드 긍/부정 비율" width="300" />
-    <img src="review_analysis/plots/sentiment distribution_googlemaps.png" alt="구글맵스 긍/부정 비율" width="300" />
-    <img src="review_analysis/plots/sentiment distribution_kakaomap.png" alt="카카오맵 긍/부정 비율" width="300" />
+    <img src="review_analysis/plots/sentiment distribution_diningcode.png" alt="다이닝코드 긍/부정 비율" width="280" />
+    <img src="review_analysis/plots/sentiment distribution_googlemaps.png" alt="구글맵스 긍/부정 비율" width="280" />
+    <img src="review_analysis/plots/sentiment distribution_kakaomap.png" alt="카카오맵 긍/부정 비율" width="280" />
 </p>
 
 - 각 플랫폼에서 긍정/부정/중립 리뷰 비율을 나타낸 그래프입니다.
-<img src="review_analysis/plots/sentiment distribution_all.png" alt="전체 긍/부정 비율" width="600" />
+<img src="review_analysis/plots/sentiment distribution_all.png" alt="전체 긍/부정 비율" width="500" />
 
 > 카카오맵 리뷰에서 부정적인 리뷰가 비교적 많이 작성되었음을 확인할 수 있습니다.
 
 - 각 플랫폼에서 긍정/부정/중립 리뷰의 리뷰 길이 평균을 나타낸 그래프입니다.
-<img src="review_analysis/plots/review length by sentiment_all.png" alt="감성별 리뷰 길이 평균" width="600" />
+<img src="review_analysis/plots/review length by sentiment_all.png" alt="감성별 리뷰 길이 평균" width="500" />
 
 > 다이닝코드, 구글맵스에서 긍정, 부정 리뷰의 길이가 유사하게 나타났습니다. 카카오맵에서는 부정적인 리뷰가 긍정적인 리뷰에 비해 길게 작성되었습니다.
 
 - 각 플랫폼에서 각 리뷰의 별점과 긍정(4, 5점), 부정(1, 2점) 감성의 일치 정도를 나타낸 그래프입니다.
 <p align="center">
-    <img src="review_analysis/plots/rating and sentiment alignment.png" alt="별점과 긍정부정 일치 정도" width="300" />
-    <img src="review_analysis/plots/positive review for high ratings.png" alt="4, 5점 리뷰 중 긍정 리뷰 비율" width="300" />
-    <img src="review_analysis/plots/negative review for low ratings.png" alt="1, 2점 리뷰 중 부정 리뷰 비율" width="300" />
+    <img src="review_analysis/plots/rating and sentiment alignment.png" alt="별점과 긍정부정 일치 정도" width="280" />
+    <img src="review_analysis/plots/positive review for high ratings.png" alt="4, 5점 리뷰 중 긍정 리뷰 비율" width="280" />
+    <img src="review_analysis/plots/negative review for low ratings.png" alt="1, 2점 리뷰 중 부정 리뷰 비율" width="280" />
 </p>
 
 ---
@@ -202,3 +202,16 @@
 ### Docker Hub Repository  
 본 프로젝트의 Docker 이미지는 아래 Docker Hub에서 확인할 수 있습니다.
 **Docker Hub:** [joetae/docker-image](https://hub.docker.com/r/joetae/docker-image)
+
+## API 실행 결과
+
+<p align="center">
+    <img src="aws/register.png" width="280" alt="Register API" />
+    <img src="aws/login.png" width="280" alt="Login API" />
+</p>
+
+<p align="center">
+    <img src="aws/update-password.png" width="280" alt="Update Password API" />
+    <img src="aws/delete.png" width="280" alt="Delete API" />
+    <img src="aws/preprocess.png" width="280" alt="Preprocess API" />
+</p>

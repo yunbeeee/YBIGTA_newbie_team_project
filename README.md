@@ -215,3 +215,8 @@
     <img src="aws/delete.png" width="280" alt="Delete API" />
     <img src="aws/preprocess.png" width="280" alt="Preprocess API" />
 </p>
+
+## Github Actions 실행
+<p align="center">
+    <img src="aws/github_action.png"> width="280" alt="Github Action" />
+</p>

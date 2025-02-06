@@ -218,5 +218,5 @@
 
 ## Github Actions 실행
 <p align="center">
-    <img src="aws/github_action.png" width="280" alt="Github Action" />
+    <img src="aws/github_action.png" alt="Github Action" />
 </p>
